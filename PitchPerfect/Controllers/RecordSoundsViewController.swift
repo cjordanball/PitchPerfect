@@ -27,15 +27,11 @@ class RecordsSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(_ sender: UIButton) {
         configUI(recording: true);
-//        recordingLabel.text = "Recording in Progress";
-//        stopRecordingButton.isEnabled = true;
-//        recordButton.isEnabled = false;
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String;
         let recordingName = "recordedVoice.wav";
         let pathArray = [dirPath, recordingName];
         let filePath = URL(string: pathArray.joined(separator: "/"));
-        print("Recording: filePath: \(filePath!)");
         
         let session = AVAudioSession.sharedInstance();
         try! session.setCategory(AVAudioSession.Category.playAndRecord, options: .defaultToSpeaker);
@@ -45,14 +41,10 @@ class RecordsSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.isMeteringEnabled = true;
         audioRecorder.prepareToRecord();
         audioRecorder.record();
-
     }
     
     @IBAction func stopRecording(_ sender: UIButton) {
         configUI(recording: false);
-//        recordingLabel.text = "Tap to Record";
-//        stopRecordingButton.isEnabled = false;
-//        recordButton.isEnabled = true;
         audioRecorder.stop();
         let audioSession = AVAudioSession.sharedInstance();
         try! audioSession.setActive(false);
