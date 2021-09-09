@@ -60,17 +60,33 @@
 		A9B02D9A26E83460002C8ADB /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				A9B02DB426E9A74B002C8ADB /* Views */,
+				A9B02DB326E9A733002C8ADB /* Controllers */,
 				A9B02D9B26E83460002C8ADB /* AppDelegate.swift */,
 				A9B02D9D26E83460002C8ADB /* SceneDelegate.swift */,
-				A9B02D9F26E83460002C8ADB /* RecordSoundsViewController.swift */,
-				A9B02DAF26E92406002C8ADB /* PlaySoundsViewController.swift */,
-				A9B02DA126E83460002C8ADB /* Main.storyboard */,
 				A9B02DA426E83461002C8ADB /* Assets.xcassets */,
-				A9B02DA626E83461002C8ADB /* LaunchScreen.storyboard */,
 				A9B02DA926E83461002C8ADB /* Info.plist */,
-				A9B02DB126E970F4002C8ADB /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = PitchPerfect;
+			sourceTree = "<group>";
+		};
+		A9B02DB326E9A733002C8ADB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9B02DB126E970F4002C8ADB /* PlaySoundsViewController+Audio.swift */,
+				A9B02DAF26E92406002C8ADB /* PlaySoundsViewController.swift */,
+				A9B02D9F26E83460002C8ADB /* RecordSoundsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9B02DB426E9A74B002C8ADB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9B02DA626E83461002C8ADB /* LaunchScreen.storyboard */,
+				A9B02DA126E83460002C8ADB /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

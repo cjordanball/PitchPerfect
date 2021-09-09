@@ -44,13 +44,11 @@ class PlaySoundsViewController: UIViewController {
             playSound(reverb: true);
         }
         configureUI(.playing);
-        print("Play Sound Button Pressed \(sender.tag)")
     }
 
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio();
         configureUI(.notPlaying);
-        print("Stop Audio Button Pressed")
     }
     
     override func viewDidLoad() {
